@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:    "itemleft1 itemright" 
+                            "itemleft2 itemright" 
+                            "itemleft3 itemright";
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item-left1{
+    grid-area: itemleft1;
+    
+}
+
+.item-left2{
+    grid-area: itemleft2;
+}
+
+.item-left3{
+    grid-area: itemleft3;
+    
+}
+
+.item-right{
+    grid-area: itemright;
+    
+}
+
+.item-left2 > h1{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.item-left2 > p{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.item-left2 > ul{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    top: 10%;
+    padding: 0;
+}
+
+.item-left2 > ul > li{
+    margin-bottom: 5%;
+}
+
+.item-left2 > ul > li:hover{
+    margin-bottom: 5%;
+    background-color: antiquewhite;
+}
+
+.item-right img{
+    max-width: 180%;
+    height: 150%;
+    border-radius: 50%;
+    position: relative;
+    bottom: 20%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:    "itemleft1 itemleft1" 
+                                "itemleft2 itemleft2" 
+                                "itemright itemright";
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item-right img{
+        max-width: 150%;
+        height: 200%;
+        border-radius: 50%;
+        position: relative;
+        top: 10%;
+        right: 10%;
+    }
+}
