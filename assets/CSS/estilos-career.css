@@ -86,7 +86,6 @@ a{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 250px;
     font-family: 'Nunito Sans', sans-serif;
-    padding-bottom: 40px;
 }
 
 .profile-address{
@@ -95,6 +94,9 @@ a{
     padding-top: 10px;
     padding-right: 10px;
     background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile-address h4{
@@ -109,6 +111,7 @@ a{
     background-color: #DDE6ED;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .profile-picture img{
@@ -137,6 +140,85 @@ a{
     text-align: justify;
 }
 
+/*FORMATION*/
+
+.grid-container-formation{
+    display: grid;
+    width: 100%;
+    grid-template-areas: ". title year1 description1 description1 ."
+                         ". title year2 description2 description2 .";
+    /*gap: 10px;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.formation-title{
+    grid-area: title;
+    background-color: #DDE6ED;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.formation-title h3{
+    border-bottom: 2px solid rgb(180, 180, 175);
+}
+
+.formation-year1{
+    grid-area: year1;
+    background-color: #DDE6ED;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.formation-year1 h3{
+    border-top: 2px solid rgb(180, 180, 175);
+}
+
+.formation-description1{
+    grid-area: description1;
+    background-color: #DDE6ED;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.formation-description1 h3{
+    border-bottom: 2px solid rgb(180, 180, 175);
+}
+.formation-description1 p{
+    text-align: justify;
+}
+
+.formation-year2{
+    grid-area: year2;
+    background-color: #DDE6ED;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.formation-year2 h3{
+    border-top: 2px solid rgb(180, 180, 175);
+}
+
+.formation-description2{
+    grid-area: description2;
+    background-color: #DDE6ED;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.formation-description2 h3{
+    border-bottom: 2px solid rgb(180, 180, 175);
+}
+.formation-description2 p{
+    text-align: justify;
+}
+
 @media (max-width: 1074px) {
     .grid-container-header{
         display: grid;
@@ -161,6 +243,16 @@ a{
         width: 150px;
         border-radius: 50%;
     }
+
+    .grid-container-formation{
+        display: grid;
+        width: 100%;
+        grid-template-areas: ". title year1 description1 description1 ."
+                             ". title year2 description2 description2 .";
+        /*gap: 10px;*/
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+        font-family: 'Nunito Sans', sans-serif;
+    }
 }
 
 @media (max-width: 875px) {
@@ -180,6 +272,16 @@ a{
         width: 100%;
         grid-template-areas: "address picture description description";
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .grid-container-formation{
+        display: grid;
+        width: 100%;
+        grid-template-areas: "title year1 description1 description1"
+                             "title year2 description2 description2";
+        /*gap: 10px;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-family: 'Nunito Sans', sans-serif;
     }
 }
 
@@ -208,5 +310,16 @@ a{
         grid-template-areas: "address" "picture" "description" "description";
         grid-template-columns: 1fr;
         grid-template-rows: 120px;
+    }
+
+    .grid-container-formation{
+        display: grid;
+        width: 100%;
+        grid-template-areas: "title" "year1" "description1" "description1"
+                             "year2" "description2" "description2";
+        /*gap: 10px;*/
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-family: 'Nunito Sans', sans-serif;
     }
 }
