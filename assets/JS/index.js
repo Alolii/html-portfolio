@@ -24,17 +24,24 @@ for(let i = 0; i < listaBotones.length; i++){
                 imagen.style.opacity = "1";
             }, 200);
         }
+        else if (listaBotones[i].textContent === "Curriculum"){
+            imagen.style.opacity = "0";
+            setTimeout(() => {
+                imagen.setAttribute("src","./assets/img/curriculum.jpg");
+                imagen.style.opacity = "1";
+            }, 200);
+        }
         else{
             alert("El valor del boton cambio");
         }
     });
 
-    listaBotones[i].addEventListener("mouseout", () => {
+    /*listaBotones[i].addEventListener("mouseout", () => {
         imagen.style.opacity = "0";
         setTimeout(() => {
             imagen.setAttribute("src","./assets/img/web-design-2038872_1280.jpg");
             imagen.style.opacity = "1";
         }, 200);
-    });
+    });*/
 }
 
