@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    background-color: rgb(16, 19, 20);
+}
+
+.main-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: "header header"
+                        "redItem blueItem"
+                        "yellowItem greenItem";
+}
+
+.text-header{
+    grid-area: header;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Concert One', cursive;
+}
+
+
+.red-item{
+    grid-area: redItem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.red-itemBlinking{
+    background-color: rgb(185, 76, 76);
+}
+
+.blue-item{
+    grid-area: blueItem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.blue-itemBlinking{
+    background-color: rgb(102, 176, 250);
+}
+
+.yellow-item{
+    grid-area: yellowItem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.yellow-itemBlinking{
+    background-color: rgb(218, 187, 110);
+}
+
+.green-item{
+    grid-area: greenItem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.green-itemBlinking{
+    background-color: rgb(72, 133, 72);
+}
+
+
+button{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Concert One', cursive;
+}
+
+.red-item > button{
+    border: 4px solid firebrick;
+    color: firebrick;
+}
+
+.blue-item > button{
+    border: 4px solid dodgerblue;
+    color: dodgerblue;
+}
+
+.yellow-item > button{
+    border: 4px solid goldenrod;
+    color: goldenrod;
+}
+
+.green-item > button{
+    border: 4px solid forestgreen;
+    color: forestgreen;
+}
+
+
+@media (max-width: 590px) {
+    *{
+        background-color: aliceblue;
+    }
+
+    .text-header{
+        color: rgb(16, 19, 20);
+        font-size: 25px;
+    }
+
+    button{
+        width: 200px;
+        height: 200px;
+    }
+}
